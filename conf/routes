@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+#Tudo sobre postagem(colecao)
+POST /post							controllers.Application.addPost()
+GET  /post							controllers.Application.getAllPosts()
+#Tudo sobre postagem(elemento)
+GET		/post/:id					controllers.Application.getPost(id: Integer)
+DELETE /post/:id					controllers.Application.deletePost(id: Integer)
+PUT    /post/:id					controllers.Application.editPost(id: Integer)
+#Tudo sobre comentario(colecao)
+GET /post/:id/comment				controllers.Application.getAllComments(id: Integer)
+POST /post/:id/comment				controllers.Application.addComment(id: Integer)
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
