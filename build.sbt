@@ -7,3 +7,6 @@ libraryDependencies ++= Seq(
   javaEbean,
   cache
 )     
+
+play.Project.playJavaSettings
+
